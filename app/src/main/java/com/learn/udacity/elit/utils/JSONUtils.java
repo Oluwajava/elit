@@ -22,7 +22,7 @@ public class JSONUtils {
 
             if (response != null) {
                 JSONObject moviesJsonObject = new JSONObject(response);
-                JSONArray movieData = moviesJsonObject.getJSONArray("results");
+                JSONArray movieData = moviesJsonObject.getJSONArray(Constants.Keys.RESULTS);
 
                 for (int i = 0; i < movieData.length(); i++) {
                     JSONObject moviesObject = (JSONObject) movieData.get(i);

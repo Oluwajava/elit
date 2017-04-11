@@ -13,8 +13,7 @@ public interface MovieView {
     void populateMovieRecylerViewWithData(List<Movie> movieList, MovieListener movieListener);
     void showProgressBar();
     void hideProgressBar();
-    void showErrorMessage();
+    void showErrorMessage(int stringId);
     void hideErrorMessage();
     void gotoDetailActivity(Movie movie);
-
 }

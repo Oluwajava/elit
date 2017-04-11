@@ -17,7 +17,7 @@ import java.net.URL;
 
 public class MovieTask extends AsyncTask<String, Void, String> {
 
-    MovieListener movieListener;
+    private MovieListener movieListener;
 
     public MovieTask(MovieListener movieListener) {
         this.movieListener = movieListener;
@@ -37,9 +37,8 @@ public class MovieTask extends AsyncTask<String, Void, String> {
                 .appendQueryParameter(Constants.Keys.API_KEY, Constants.Keys.MY_API_KEY)
                 .build();
 
-        URL url = null;
         try {
-            url = new URL(uri.toString());
+            URL url = new URL(uri.toString());
             moviesResult = NetworkUtils.makeNetworkCall(url);
         } catch (MalformedURLException e) {
             e.printStackTrace();
@@ -53,12 +52,11 @@ public class MovieTask extends AsyncTask<String, Void, String> {
     protected void onPostExecute(String s) {
         super.onPostExecute(s);
 
-        if(s != null) {
+        if(s != null && !s.isEmpty()) {
             movieListener.onFinished(JSONUtils.getJsonFromString(s));
         } else {
             movieListener.onFailed();
         }
-
 
     }
 }

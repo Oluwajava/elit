@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements MovieView{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        moviePresenter = new MoviePresenter(this);
+        moviePresenter = new MoviePresenter(this, this);
         initializeWidgets();
 
         if(savedInstanceState != null) {
@@ -82,8 +82,9 @@ public class MainActivity extends AppCompatActivity implements MovieView{
     }
 
     @Override
-    public void showErrorMessage() {
+    public void showErrorMessage(int stringId) {
         movieRecyclerView.setVisibility(View.INVISIBLE);
+        errorMessageTextView.setText(stringId);
         errorMessageTextView.setVisibility(View.VISIBLE);
     }
 
@@ -100,8 +101,6 @@ public class MainActivity extends AppCompatActivity implements MovieView{
         bundle.putParcelable(Constants.Keys.MOVIES_STATE, movie);
         detailActivityIntent.putExtras(bundle);
         startActivity(detailActivityIntent);
-        Toast.makeText(this, "Title: "+movie.getOriginalTitle(), Toast.LENGTH_SHORT).show();
-
     }
 
     @Override

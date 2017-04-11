@@ -2,6 +2,7 @@ package com.learn.udacity.elit.presenter;
 
 import android.os.Parcelable;
 
+import com.learn.udacity.elit.R;
 import com.learn.udacity.elit.model.Movie;
 import com.learn.udacity.elit.utils.Constants;
 import com.learn.udacity.elit.view.DetailView;
@@ -23,8 +24,8 @@ public class DetailPresenter {
 
         detailView.setImageThumbnail(Constants.Endpoints.IMAGE_BASE_URL+movie.getPosterPath());
         detailView.setName(movie.getOriginalTitle());
-        detailView.setRating("Rating: "+movie.getVoteAverage());
-        detailView.setReleaseDate("Release Date: "+movie.getReleaseDate());
+        detailView.setRating(R.string.rating+""+movie.getVoteAverage());
+        detailView.setReleaseDate(R.string.release_date+""+movie.getReleaseDate());
         detailView.setSynopsis(movie.getOverview());
 
     }

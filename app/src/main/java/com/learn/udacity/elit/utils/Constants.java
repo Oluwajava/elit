@@ -17,6 +17,7 @@ public class Constants {
         String API_KEY = "api_key";
         String MY_API_KEY = "YOUR_API_KEY_HERE";
 
+        String RESULTS = "results";
         String POSTER_PATH = "poster_path";
         String ADULT = "adult";
         String OVERVIEW = "overview";
