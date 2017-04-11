@@ -56,12 +56,12 @@ public class DetailActivity extends AppCompatActivity implements DetailView {
 
     @Override
     public void setReleaseDate(String releaseDate) {
-        releaseDateTextView.setText(releaseDate);
+        releaseDateTextView.setText(getString(R.string.release_date)+releaseDate);
     }
 
     @Override
     public void setRating(String rating) {
-        ratingTextView.setText(rating);
+        ratingTextView.setText(getString(R.string.rating)+rating);
     }
 
     @Override

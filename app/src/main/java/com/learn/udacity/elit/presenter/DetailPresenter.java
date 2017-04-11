@@ -24,8 +24,8 @@ public class DetailPresenter {
 
         detailView.setImageThumbnail(Constants.Endpoints.IMAGE_BASE_URL+movie.getPosterPath());
         detailView.setName(movie.getOriginalTitle());
-        detailView.setRating(R.string.rating+""+movie.getVoteAverage());
-        detailView.setReleaseDate(R.string.release_date+""+movie.getReleaseDate());
+        detailView.setRating(""+movie.getVoteAverage());
+        detailView.setReleaseDate(""+movie.getReleaseDate());
         detailView.setSynopsis(movie.getOverview());
 
     }
