@@ -22,11 +22,9 @@ public class Constants {
         String ADULT = "adult";
         String OVERVIEW = "overview";
         String RELEASE_DATE = "release_date";
-        String GENRE_IDS = "genre_ids";
         String ID = "id";
         String ORIGINAL_TITLE = "original_title";
         String ORIGINAL_LANGUAGE = "original_language";
-        String TITLE = "title";
         String BACKDROP_PATH = "backdrop_path";
         String POPULARITY = "popularity";
         String VOTE_COUNT = "vote_count";
@@ -35,7 +33,4 @@ public class Constants {
         String MOVIES_STATE = "movie_state";
     }
 
-    public interface Values {
-        int NO_OF_COLUMN = 2;
-    }
 }
