@@ -42,7 +42,11 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MoviesView
 
     @Override
     public void onBindViewHolder(MoviesViewHolder holder, int position) {
-        Glide.with(context).load(Constants.Endpoints.IMAGE_BASE_URL+movieList.get(position).getPosterPath()).into(holder.movieThumbnail);
+        Glide.with(context)
+             .load(Constants.Endpoints.IMAGE_BASE_URL+movieList.get(position).getPosterPath())
+             .placeholder(android.R.drawable.picture_frame)
+             .error(android.R.drawable.picture_frame)
+             .into(holder.movieThumbnail);
     }
 
     @Override
